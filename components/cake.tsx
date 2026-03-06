@@ -264,20 +264,7 @@ export default function CakeCutting() {
       `}</style>
 
       {/* Title */}
-      <h1
-        style={{
-          fontSize: "clamp(1.6rem, 5vw, 2.8rem)",
-          color: "#FFD700",
-          marginBottom: 40,
-          letterSpacing: "0.05em",
-          textAlign: "center",
-          animation: "titleGlow 2s ease-in-out infinite",
-          fontStyle: "italic",
-          fontWeight: 700,
-        }}
-      >
-        🎉 Birthday Cake Cutting 🎉
-      </h1>
+      
 
       {/* Scene container */}
       <div style={{ position: "relative", width: 300, height: 340 }}>
