@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react"
 import { Volume2, VolumeX, Heart, Send } from "lucide-react"
 import Confetti from "react-confetti"
+import Cake from "@/components/cake"
 export default function BirthdayPage() {
   const [isMuted, setIsMuted] = useState(false)
   const [wishMessage, setWishMessage] = useState("")
@@ -22,7 +23,7 @@ useEffect(() => {
 
   const triggerConfetti = () => {
   setShowConfetti(true);
-  setTimeout(() => setShowConfetti(false), 5000); // show for 5 sec instead of 3
+  setTimeout(() => setShowConfetti(false), 5000); 
 };
 
 
@@ -44,12 +45,9 @@ useEffect(() => {
     }
 
     const name = senderName.trim() || "A Friend"
-    const message = `🎉 Birthday Wish for Usman! 🎉\n\nFrom: ${name}\n\nMessage: ${wishMessage}`
+    const message = `🎉 Birthday Wish for tuhaeed! 🎉\n\nFrom: ${name}\n\nMessage: ${wishMessage}`
     const encodedMessage = encodeURIComponent(message)
-    const whatsappNumber = "+436608611382"
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
-
-    window.open(whatsappUrl, "_blank")
+   
     setWishMessage("")
     setSenderName("")
   }
@@ -70,32 +68,32 @@ useEffect(() => {
 
   const memories = [
     {
-      image: "us9.png",
+      image: "t1.png",
       caption: "Peaceful moments by the lake",
     },
     {
-      image: "us8.png",
+      image: "t2.png",
       caption: "Elegant and thoughtful",
     },
     {
-      image: "us3.png",
+      image: "t3.png",
       caption: "Formal and distinguished",
     },
     {
-      image: "us4.png",
+      image: "t4.png",
       caption: "Winter adventures",
     },
     {
-      image: "us10.png",
+      image: "t5.png",
       caption: "Stylish and confident",
     },
   ]
 
   const duas = [
      {
-      arabic: " Happy Birthday Usman Ghani",
-      transliteration: "Turning 29 Years Young!",
-      english: "Born: November 14, 1996",
+      arabic: " Happy Birthday Tuaheed",
+      transliteration: "Turning 27 Years Young!",
+      english: "Born: March 6, 1998",
     },{
       arabic: "",
       transliteration: "Celebrating a wonderful person with a kind heart and inspiring spirit. May your day be filled with joy, laughter, and countless blessings.",
@@ -160,17 +158,15 @@ useEffect(() => {
       </button>
 
       <section className="flex flex-col h-1/3 items-center justify-center  py-22 sm:py-20 md:py-50  text-center relative overflow-hidden">
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="absolute inset-0 w-full h-full object-cover"
+  <img
+  src={"t10.png"}
+  alt=""
+  
+    className="absolute inset-0 w-full h-auto object-cover"
   >
-    <source src="/usv.mp4" type="video/mp4" />
-  </video>
-
-  <div className="absolute inset-0"></div>
+  </img>
+<div></div>
+  <div className="absolute inset-0"><Cake /></div>
 
   <div className="relative z-10 space-y-6 sm:space-y-8 max-w-2xl animate-fade-in hidden md:flex">
     <button
@@ -210,7 +206,7 @@ useEffect(() => {
       <img
         src={memory.image || "/placeholder.svg"}
         alt={memory.caption}
-        className="w-full h-auto max-h-80 object-contain transition-transform duration-500 group-hover:scale-105"
+        className="w-full h-auto  object-contain transition-transform duration-500 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-red-900/80 via-red-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
         <p className="text-white font-semibold text-sm sm:text-lg text-balance">{memory.caption}</p>
@@ -250,53 +246,7 @@ useEffect(() => {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 px-4 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-sm md:text-4xl  font-bold text-center text-red-900 mb-2 sm:mb-4 text-balance">
-            Send Your Wishes
-          </h2>
-          <p className="text-center text-red-800 mb-4 md:mb-12 text-base text-sm md:text-lg">
-            Write a special message and send it directly to Usman's WhatsApp
-          </p>
-
-          <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg border border-red-200 animate-fade-in-up">
-            <div className="space-y-4 sm:space-y-6">
-              <div>
-                <label className="block text-sm sm:text-base font-semibold text-red-900 mb-2">Your Name</label>
-                <input
-                  type="text"
-                  value={senderName}
-                  onChange={(e) => setSenderName(e.target.value)}
-                  placeholder="Enter your name (optional)"
-                  className="w-full px-4 py-2 sm:py-3 rounded-lg border-2 border-red-300 focus:border-red-500 focus:outline-none text-sm sm:text-base bg-white transition-all"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm sm:text-base font-semibold text-red-900 mb-2">Your Wish Message</label>
-                <textarea
-                  value={wishMessage}
-                  onChange={(e) => setWishMessage(e.target.value)}
-                  placeholder="Write your birthday wishes here... (e.g., Happy Birthday! Wishing you a year full of joy and success!)"
-                  className="w-full px-4 py-3 sm:py-4 rounded-lg border-2 border-red-300 focus:border-red-500 focus:outline-none text-sm sm:text-base bg-white resize-none h-24 sm:h-32 transition-all"
-                />
-              </div>
-
-              <button
-                onClick={sendWishToWhatsApp}
-                className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-1 md:py-4 px-2 md:px-6 rounded-lg text-base sm:text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-2"
-              >
-                <Send className="w-4 h-4 sm:w-6 sm:h-6" />
-                Send via WhatsApp
-              </button>
-
-              <p className="text-xs sm:text-sm text-red-700 text-center">
-                Your message will open WhatsApp. Make sure you have WhatsApp installed on your device.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+   
 
       <section className="py-4 md:py-16 sm:py-20 px-4 bg-gradient-to-br from-pink-50 to-red-50">
         <div className="max-w-2xl mx-auto text-center space-y-4 sm:space-y-6">
@@ -307,11 +257,11 @@ useEffect(() => {
             May every moment of your life be filled with happiness, success, and the love of those around you. Here's to
             another year of growth, adventure, and wonderful memories!
           </p>
-          <p className="text-md md:text-2xl font-bold text-red-600">Happy Birthday, Usman Ghani</p>
+          <p className="text-md md:text-2xl font-bold text-red-600">Happy Birthday, Tuaheed</p>
 
           <div className="mt-8 sm:mt-12 p-4 sm:p-6 bg-gradient-to-r from-pink-200 via-red-200 to-rose-200 rounded-xl sm:rounded-2xl border-2 border-red-500 shadow-lg animate-pulse">
             <p className="text-base sm:text-lg text-red-900 font-semibold">✨ With Love & Best Wishes From ✨</p>
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-700 mt-2">Umar Azeem</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-700 mt-2">Muhammad</p>
             <p className="text-sm sm:text-base text-red-800 mt-2">Celebrating this special day with you! 🎉</p>
           </div>
         </div>
