@@ -3,7 +3,6 @@ import { useState, useRef, useEffect } from "react"
 import { Volume2, VolumeX, Heart, Send } from "lucide-react"
 import Confetti from "react-confetti"
 import Cake from "@/components/cake"
-import Wish from "@/components/wish"
 export default function BirthdayPage() {
   const [isMuted, setIsMuted] = useState(false)
   const [wishMessage, setWishMessage] = useState("")

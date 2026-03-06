@@ -12,6 +12,7 @@ display: "swap",
 const geistMono = Geist_Mono({
 subsets: ["latin"],
 display: "swap",
+variable: "--font-geist-mono",
 })
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ children,
 children: React.ReactNode
 }) {
 return ( <html lang="en">
-<body className={`${geist.className} ${geistMono.variable} antialiased`}>
+<body className={`${geist.className} ${geistMono.className} antialiased`}>
 {children} <Analytics /> </body> </html>
 )
 }
