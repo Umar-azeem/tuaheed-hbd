@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react"
 import { Volume2, VolumeX, Heart, Send } from "lucide-react"
 import Confetti from "react-confetti"
 import Cake from "@/components/cake"
+import Wish from "@/components/wish"
 export default function BirthdayPage() {
   const [isMuted, setIsMuted] = useState(false)
   const [wishMessage, setWishMessage] = useState("")
@@ -166,7 +167,6 @@ useEffect(() => {
   >
   </img>
 <div></div>
-  <div className="absolute inset-0"><Cake /></div>
 
   <div className="relative z-10 space-y-6 sm:space-y-8 max-w-2xl animate-fade-in hidden md:flex">
     <button
@@ -178,6 +178,8 @@ useEffect(() => {
     </button>
   </div>
 </section>
+      <section className="py-4 md:py-16 sm:py-20 px-4 bg-gradient-to-br from-pink-100 to-red-100">
+    <Cake /></section>
 
 
 
@@ -245,7 +247,9 @@ useEffect(() => {
           </div>
         </div>
       </section>
+<section className="py-5 sm:py-20 px-4 bg-white/50 backdrop-blur-sm">
 
+</section>
    
 
       <section className="py-4 md:py-16 sm:py-20 px-4 bg-gradient-to-br from-pink-50 to-red-50">
