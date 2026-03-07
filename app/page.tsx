@@ -90,7 +90,7 @@ export default function BirthdayPage() {
 
   const duas = [
     {
-      arabic: " Happy Birthday Tuaheed",
+      arabic: " Happy Birthday Tauheed",
       transliteration: "Turning 27 Years Young!",
       english: "Born: March 6, 1998",
     },
@@ -265,7 +265,7 @@ export default function BirthdayPage() {
             adventure, and wonderful memories!
           </p>
           <p className="text-md md:text-2xl font-bold text-red-600">
-            Happy Birthday, Tuaheed
+            Happy Birthday, Tauheed
           </p>
 
           <div className="mt-8 sm:mt-12 p-4 sm:p-6 bg-linear-to-r from-pink-200 via-red-200 to-rose-200 rounded-xl sm:rounded-2xl border-2 border-red-500 shadow-lg animate-pulse">

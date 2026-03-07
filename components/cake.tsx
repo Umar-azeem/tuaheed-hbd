@@ -912,7 +912,7 @@ export default function CakeCutting() {
               fontStyle: "italic",
             }}
           >
-            🎊 Happy Birthday Tuaheed! 🎊
+            🎊 Happy Birthday Tauheed! 🎊
           </div>
           <div
             style={{

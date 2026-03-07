@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Happy Birthday Dear Tuaheed",
+  title: "Happy Birthday Dear Tauheed",
   description:
-    "A special birthday celebration for Tuaheed with memories and wishes",
+    "A special birthday celebration for Tauheed with memories and wishes",
   generator: "Muhammad",
 };
 
