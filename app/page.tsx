@@ -91,8 +91,8 @@ export default function BirthdayPage() {
   const duas = [
     {
       arabic: " Happy Birthday Tauheed",
-      transliteration: "Turning 27 Years Young!",
-      english: "Born: March 6, 1998",
+      transliteration: "Turning 25 Years Young!",
+      english: "Born: March 6, 2001",
     },
     {
       arabic: "",
@@ -127,7 +127,7 @@ export default function BirthdayPage() {
   ];
 
   const calculateAge = () => {
-    const birthDate = new Date(1996, 10, 14);
+    const birthDate = new Date(2001, 3, 6);
     const today = new Date();
     let age = today.getFullYear() - birthDate.getFullYear();
     const monthDiff = today.getMonth() - birthDate.getMonth();
